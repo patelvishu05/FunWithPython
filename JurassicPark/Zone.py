@@ -5,10 +5,10 @@ class Zone():
 
     dinosaurList=[]
 
-    def __init__(self,name,zoneCode,rating):
+    def __init__(self,name,rating,zoneCode):
         self.name = name
-        self.zoneCode = zoneCode
         self.rating = rating
+        self.zoneCode = zoneCode
         self.dinosaurList = []
 
     def __str__(self):

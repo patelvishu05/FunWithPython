@@ -9,7 +9,7 @@ try:
     jurassicPark.loadZones("./data/zones.csv")
     jurassicPark.loadDinosaurs("data/dinos.csv")
 
-    print(jurassicPark.getZoneList()[0].getDinosaurList()[0])
+    print(jurassicPark)
 
 
     # jurassicPark.relocate("Blue","TY")
