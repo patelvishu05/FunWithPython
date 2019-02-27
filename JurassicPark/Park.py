@@ -10,6 +10,9 @@ class Park:
         return self.name
 
     def loadZones(self,fileName):
+        file = open(fileName,"r")
+        inputLines = file.read().splitlines()
+        
 
     
     def loadDinosaurs(self,fileName):
