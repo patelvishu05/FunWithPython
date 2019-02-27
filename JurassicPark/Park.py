@@ -10,7 +10,7 @@ class Park:
         self.zoneList = []
 
     def __str__(self):
-        return self.name + '\n' + '\n'.join(str(zone) for zone in self.zoneList)
+        return "Welcome to " + self.name + '!\n' + "----------------------------\n" + '\n'.join(str(zone) for zone in self.zoneList)
     
 
     def loadZones(self,fileName):
@@ -33,6 +33,21 @@ class Park:
                     self.zoneList[i].addToDinosaurList(dino)
                 i+=1
 
+    def relocate(self,name,zoneCode):
+        i=0
+        j=0
+        dino = None
+        for i in range(len(self.zoneList)):
+            for j in range(len(self.zoneList[i].getDinosaurList())):
+                if self.zoneList[i].getDinosaurList()[j].getName() == name:
+                    dino = self.zoneList[i].getDinosaurList()[j]
+                j+=1
+            i+=1
+        i=0
+        for i in range(len(self.zoneList)):
+            if self.zoneList[i].getZoneCode() == zoneCode:
+                self.zoneList[i].addToDinosaurList(dino)
+            
 
     #-----------------Gettes and Setters-----------------#
     

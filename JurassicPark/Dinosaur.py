@@ -7,9 +7,12 @@ class Dinosaur:
         self.zoneCode = zoneCode
 
     def __str__(self):
-        return self.name + " " + self.dinoType + " " +  self.diet + " " +  self.zoneCode
+        return " * " + self.name + " - " + self.dinoType + " (" + self.parseDiet() +")"
 
     #----------Getters and Setters----------------#
+
+    def parseDiet(self):
+        return "not carnivore" if self.diet == 'true' else "carnivore"
 
     def getName(self):
         return self.name

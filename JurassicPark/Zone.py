@@ -12,7 +12,7 @@ class Zone():
         self.dinosaurList = []
 
     def __str__(self):
-        return self.name + "\t" + self.zoneCode + "\t" + self.rating + '\n'.join(str(dino) for dino in self.dinosaurList)
+        return self.zoneCode + ": " + self.name + "(" + self.rating + " risk):\n" + '\n'.join(str(dino) for dino in self.dinosaurList) + '\n'
 
     #----------------Getters and Setters-------------------#
 
@@ -36,4 +36,7 @@ class Zone():
     
     def addToDinosaurList(self,dino):
         self.dinosaurList.append(dino)
+
+    def removeDinosaur(self,dino):
+        self.dinosaurList.remove(dino)
 

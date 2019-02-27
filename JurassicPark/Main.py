@@ -12,10 +12,10 @@ try:
     print(jurassicPark)
 
 
-    # jurassicPark.relocate("Blue","TY")
+    jurassicPark.relocate("Blue","TY")
     # jurassicPark.save()
 
-    # print(jurassicPark)
+    print(jurassicPark)
 
 except FileNotFoundError as e:
     print("File not found !!")
