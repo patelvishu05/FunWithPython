@@ -5,13 +5,14 @@ class Zone():
 
     dinosaurList=[]
 
-    def __init__(self,zoneCode,rating):
+    def __init__(self,name,zoneCode,rating):
+        self.name = name
         self.zoneCode = zoneCode
         self.rating = rating
         self.dinosaurList = []
 
     def __str__(self):
-        return self.zoneCode + "\t" + self.rating
+        return self.name + "\t" + self.zoneCode + "\t" + self.rating + '\n'.join(str(dino) for dino in self.dinosaurList)
 
     #----------------Getters and Setters-------------------#
 
