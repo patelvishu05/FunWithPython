@@ -6,14 +6,14 @@ from Park import *
 jurassicPark = Park("Jurassic Park")
 
 try:
-    jurassicPark.loadZones("./data/zones.csv")
+    jurassicPark.loadZones("data/zones.csv")
     jurassicPark.loadDinosaurs("data/dinos.csv")
 
     print(jurassicPark)
 
 
     jurassicPark.relocate("Blue","TY")
-    # jurassicPark.save()
+    jurassicPark.save("output/dinos.csv")
 
     print(jurassicPark)
 

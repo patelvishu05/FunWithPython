@@ -12,7 +12,6 @@ class Park:
     def __str__(self):
         return "Welcome to " + self.name + '!\n' + "----------------------------\n" + '\n'.join(str(zone) for zone in self.zoneList)
     
-
     def loadZones(self,fileName):
         file = open(fileName,"r")
         inputLines = file.read().splitlines()
@@ -48,8 +47,14 @@ class Park:
             if self.zoneList[i].getZoneCode() == zoneCode:
                 self.zoneList[i].addToDinosaurList(dino)
             
+    def save(self,fileName):
+        file = open(fileName,"w+")
+        for zone in self.zoneList:
+            for dino in zone.getDinosaurList():
+                file.write(dino.getName() + "," + dino.getDinoType() + "," + dino.getDiet() + "," + dino.getZoneCode() + '\n')
+        file.close()
 
-    #-----------------Gettes and Setters-----------------#
+    #-----------------Getters and Setters-----------------#
     
     def getName(self):
         return self.name
