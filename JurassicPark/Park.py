@@ -43,6 +43,7 @@ class Park:
                 j+=1
             i+=1
         i=0
+        dino.setZoneCode(zoneCode)
         for i in range(len(self.zoneList)):
             if self.zoneList[i].getZoneCode() == zoneCode:
                 self.zoneList[i].addToDinosaurList(dino)
