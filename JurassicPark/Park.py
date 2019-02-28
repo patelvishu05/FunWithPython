@@ -40,6 +40,8 @@ class Park:
             for j in range(len(self.zoneList[i].getDinosaurList())):
                 if self.zoneList[i].getDinosaurList()[j].getName() == name:
                     dino = self.zoneList[i].getDinosaurList()[j]
+                    self.zoneList[i].removeDinosaur(dino)
+                    break
                 j+=1
             i+=1
         i=0
